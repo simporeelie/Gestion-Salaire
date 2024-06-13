@@ -12,7 +12,7 @@ class EmployersController extends Controller
      */
     public function index()
     {
-        //
+        return view('employers.index');
     }
 
     /**
@@ -20,7 +20,8 @@ class EmployersController extends Controller
      */
     public function create()
     {
-        //
+        return view('employers.create');
+        
     }
 
     /**
@@ -44,7 +45,8 @@ class EmployersController extends Controller
      */
     public function edit(Employers $employers)
     {
-        //
+        return view('employers.edit');
+        
     }
 
     /**
