@@ -2,200 +2,79 @@
 
 @section('content')
 
-<div class="content container-fluid">
-    <div class="page-header">
-        <div class="row">
-            <div class="col-sm-12 mt-5">
-                <h3 class="page-title mt-3">Good Morning Soeng Souy!</h3>
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item active">Dashboard</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card board1 fill">
-                <div class="card-body">
-                    <div class="dash-widget-header">
-                        <div>
-                            <h3 class="card_widget_header">236</h3>
-                            <h6 class="text-muted">Total Booking</h6> </div>
-                        <div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="8.5" cy="7" r="4"></circle>
-                        <line x1="20" y1="8" x2="20" y2="14"></line>
-                        <line x1="23" y1="11" x2="17" y2="11"></line>
-                        </svg></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card board1 fill">
-                <div class="card-body">
-                    <div class="dash-widget-header">
-                        <div>
-                            <h3 class="card_widget_header">180</h3>
-                            <h6 class="text-muted">Available Rooms</h6> </div>
-                        <div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign">
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card board1 fill">
-                <div class="card-body">
-                    <div class="dash-widget-header">
-                        <div>
-                            <h3 class="card_widget_header">1538</h3>
-                            <h6 class="text-muted">Enquiry</h6> </div>
-                        <div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
-                        </path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="12" y1="18" x2="12" y2="12"></line>
-                        <line x1="9" y1="15" x2="15" y2="15"></line>
-                        </svg></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-            <div class="card board1 fill">
-                <div class="card-body">
-                    <div class="dash-widget-header">
-                        <div>
-                            <h3 class="card_widget_header">364</h3>
-                            <h6 class="text-muted">Collections</h6> </div>
-                        <div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                        </path>
-                        </svg></span> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 col-lg-6">
-            <div class="card card-chart">
-                <div class="card-header">
-                    <h4 class="card-title">VISITORS</h4> </div>
-                <div class="card-body">
-                    <div id="line-chart"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-lg-6">
-            <div class="card card-chart">
-                <div class="card-header">
-                    <h4 class="card-title">ROOMS BOOKED</h4> </div>
-                <div class="card-body">
-                    <div id="donut-chart"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 d-flex">
-            <div class="card card-table flex-fill">
-                <div class="card-header">
-                    <h4 class="card-title float-left mt-2">Booking</h4>
-                    <button type="button" class="btn btn-primary float-right veiwbutton">Veiw All</button>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover table-center">
-                            <thead>
-                                <tr>
-                                    <th>Booking ID</th>
-                                    <th>Name</th>
-                                    <th>Email ID</th>
-                                    <th>Aadhar Number</th>
-                                    <th class="text-center">Room Type</th>
-                                    <th class="text-right">Number</th>
-                                    <th class="text-center">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>BKG-0001</div>
-                                    </td>
-                                    <td class="text-nowrap">Tommy Bernal</td>
-                                    <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3743585a5a4e55524559565b77524f565a475b521954585a">[email&#160;protected]</a></td>
-                                    <td>12414786454545</td>
-                                    <td class="text-center">Double</td>
-                                    <td class="text-right">
-                                        <div>631-254-6480</div>
-                                    </td>
-                                    <td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>BKG-0002</div>
-                                    </td>
-                                    <td class="text-nowrap">Ellen Thill</td>
-                                    <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89fbe0eae1e8fbedebfbe6ebfafdc9ecf1e8e4f9e5eca7eae6e4">[email&#160;protected]</a></td>
-                                    <td>5456223232322</td>
-                                    <td class="text-center">Double</td>
-                                    <td class="text-right">
-                                        <div>830-468-1042</div>
-                                    </td>
-                                    <td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>BKG-0003</div>
-                                    </td>
-                                    <td class="text-nowrap">Corina Kelsey</td>
-                                    <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="76131a1a1318021e1f1a1a36130e171b061a135815191b">[email&#160;protected]</a></td>
-                                    <td>454543232625</td>
-                                    <td class="text-center">Single</td>
-                                    <td class="text-right">
-                                        <div>508-335-5531</div>
-                                    </td>
-                                    <td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>BKG-0004</div>
-                                    </td>
-                                    <td class="text-nowrap">Carolyn Lane</td>
-                                    <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="50333f22393e313b353c23352910373d31393c7e333f3d">[email&#160;protected]</a></td>
-                                    <td>2368989562621</td>
-                                    <td class="text-center">Double</td>
-                                    <td class="text-right">
-                                        <div>262-260-1170</div>
-                                    </td>
-                                    <td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-nowrap">
-                                        <div>BKG-0005</div>
-                                    </td>
-                                    <td class="text-nowrap">Denise</td>
-                                    <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c7f7d6e73706572707d72795c7b717d7570327f7371">[email&#160;protected]</a></td>
-                                    <td>3245455582287</td>
-                                    <td class="text-center">Single</td>
-                                    <td class="text-right">
-                                        <div>570-458-0070</div>
-                                    </td>
-                                    <td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+<h1 class="app-page-title">Overview</h1>
+			    
+			    <div class="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
+				    <div class="inner">
+					    <div class="app-card-body p-3 p-lg-4">
+						    <h3 class="mb-3">Welcome, developer!</h3>
+						    <div class="row gx-5 gy-3">
+						        <div class="col-12 col-lg-9">
+							        
+							        <div>Portal is a free Bootstrap 5 admin dashboard template. The design is simple, clean and modular so it's a great base for building any modern web app.</div>
+							    </div><!--//col-->
+							    <div class="col-12 col-lg-3">
+								    <a class="btn app-btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/admin-dashboard/portal-free-bootstrap-admin-dashboard-template-for-developers/"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-arrow-down me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+                                    <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
+                                    <path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 10.293V6.5A.5.5 0 0 1 8 6z"/>
+                                    </svg>Free Download</a>
+							    </div><!--//col-->
+						    </div><!--//row-->
+						    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					    </div><!--//app-card-body-->
+					    
+				    </div><!--//inner-->
+			    </div><!--//app-card-->
+				    
+			    <div class="row g-4 mb-4">
+				    <div class="col-6 col-lg-3">
+					    <div class="app-card app-card-stat shadow-sm h-100">
+						    <div class="app-card-body p-3 p-lg-4">
+							    <h4 class="stats-type mb-1">Total Departement</h4>
+							    <div class="stats-figure">{{$totalDepartement}}</div>
+							    <div class="stats-meta text-success">
+								    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                    </svg> 20%</div>
+						    </div><!--//app-card-body-->
+						    <a class="app-card-link-mask" href="#"></a>
+					    </div><!--//app-card-->
+				    </div><!--//col-->
+				    
+				    <div class="col-6 col-lg-3">
+					    <div class="app-card app-card-stat shadow-sm h-100">
+						    <div class="app-card-body p-3 p-lg-4">
+							    <h4 class="stats-type mb-1">Total Employe</h4>
+							    <div class="stats-figure">{{$totalEmploye}}</div>
+							    <div class="stats-meta text-success">
+								    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                                </svg> 5% </div>
+						    </div><!--//app-card-body-->
+						    <a class="app-card-link-mask" href="#"></a>
+					    </div><!--//app-card-->
+				    </div><!--//col-->
+				    <div class="col-6 col-lg-3">
+					    <div class="app-card app-card-stat shadow-sm h-100">
+						    <div class="app-card-body p-3 p-lg-4">
+							    <h4 class="stats-type mb-1">Total Administrateu</h4>
+							    <div class="stats-figure">{{$totalAdministrateur}}</div>
+							    <div class="stats-meta">
+								    Open</div>
+						    </div><!--//app-card-body-->
+						    <a class="app-card-link-mask" href="#"></a>
+					    </div><!--//app-card-->
+				    </div><!--//col-->
+				    <div class="col-6 col-lg-3">
+					    <div class="app-card app-card-stat shadow-sm h-100">
+						    <div class="app-card-body p-3 p-lg-4">
+							    <h4 class="stats-type mb-1">Retard de paiement</h4>
+							    <div class="stats-figure">0</div>
+							    <div class="stats-meta">New</div>
+						    </div><!--//app-card-body-->
+						    <a class="app-card-link-mask" href="#"></a>
+					    </div><!--//app-card-->
+				    </div><!--//col-->
+			    </div><!--//row-->		    
 @endsection

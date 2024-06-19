@@ -1,140 +1,116 @@
-<div id="sidebar-menu" class="sidebar-menu">
-    <ul>
-        <li class="active"> <a href="index.html"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
-        <li class="list-divider"></li>
-        <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="all-booking.html"> All Booking </a></li>
-                <li><a href="edit-booking.html"> Edit Booking </a></li>
-                <li><a href="add-booking.html"> Add Booking </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Customers </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="all-customer.html"> All customers </a></li>
-                <li><a href="edit-customer.html"> Edit Customer </a></li>
-                <li><a href="add-customer.html"> Add Customer </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="all-rooms.html">All Rooms </a></li>
-                <li><a href="edit-room.html"> Edit Rooms </a></li>
-                <li><a href="add-room.html"> Add Rooms </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="all-staff.html">All Staff </a></li>
-                <li><a href="edit-staff.html"> Edit Staff </a></li>
-                <li><a href="add-staff.html"> Add Staff </a></li>
-            </ul>
-        </li>
-        <li> <a href="pricing.html"><i class="far fa-money-bill-alt"></i> <span>Pricing</span></a> </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-share-alt"></i> <span> Apps </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="chat.html"><i class="fas fa-comments"></i><span> Chat </span></a></li>
-                <li class="submenu"> <a href="#"><i class="fas fa-video camera"></i> <span> Calls </span> <span class="menu-arrow"></span></a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a href="voice-call.html"> Voice Call </a></li>
-                        <li><a href="video-call.html"> Video Call </a></li>
-                        <li><a href="incoming-call.html"> Incoming Call </a></li>
+<div id="sidepanel-drop" class="sidepanel-drop"></div>
+<div class="sidepanel-inner d-flex flex-column">
+    <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+    <div class="app-branding">
+        <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
+
+    </div><!--//app-branding-->  
+    
+    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+        <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+            <li class="nav-item">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link active" href="{{route('dashboard')}}">
+                    <span class="nav-icon">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+                            <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        </svg>
+                     </span>
+                     <span class="nav-link-text">Dashboard</span>
+                </a><!--//nav-link-->
+            </li><!--//nav-item-->
+            <li class="nav-item">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link" href="docs.html">
+                    <span class="nav-icon">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.828 4a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 6.173 2H2.5a1 1 0 0 0-1 .981L1.546 4h-1L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3v1z"/>
+                        <path fill-rule="evenodd" d="M13.81 4H2.19a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zM2.19 3A2 2 0 0 0 .198 5.181l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3H2.19z"/>
+                        </svg>
+                     </span>
+                     <span class="nav-link-text">Docs</span>
+                </a><!--//nav-link-->
+            </li><!--//nav-item-->
+           
+            <li class="nav-item has-submenu">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
+                    <span class="nav-icon">
+                    <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4z"/>
+                        <path d="M6 0h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1H4a2 2 0 0 1 2-2z"/>
+                        </svg>
+                     </span>
+                     <span class="nav-link-text">Employers</span>
+                    <span class="submenu-arrow">
+                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </span><!--//submenu-arrow-->
+                </a><!--//nav-link-->
+                <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
+                    <ul class="submenu-list list-unstyled">
+                        <li class="submenu-item"><a class="submenu-link" href="{{route('employers.index')}}">Liste</a></li>
+                        <li class="submenu-item"><a class="submenu-link" href="{{route('employers.create')}}">Ajout</a></li>
+                        <li class="submenu-item"><a class="submenu-link" href="settings.html">Settings</a></li>
                     </ul>
-                </li>
-                <li class="submenu"> <a href="#"><i class="fas fa-envelope"></i> <span> Email </span> <span class="menu-arrow"></span></a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a href="compose.html">Compose Mail </a></li>
-                        <li><a href="inbox.html"> Inbox </a></li>
-                        <li><a href="mail-veiw.html"> Mail Veiw </a></li>
+                </div>
+            </li><!--//nav-item-->
+            <li class="nav-item has-submenu">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-2" aria-expanded="false" aria-controls="submenu-2">
+                    <span class="nav-icon">
+                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                       <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-columns-gap" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M6 1H1v3h5V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12h-5v3h5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8H1v7h5V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6h-5v7h5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+                       </svg>
+                     </span>
+                     <span class="nav-link-text">External</span>
+                    <span class="submenu-arrow">
+                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </span><!--//submenu-arrow-->
+                </a><!--//nav-link-->
+                <div id="submenu-2" class="collapse submenu submenu-2" data-bs-parent="#menu-accordion">
+                    <ul class="submenu-list list-unstyled">
+                        <li class="submenu-item"><a class="submenu-link" href="login.html">Login</a></li>
+                        <li class="submenu-item"><a class="submenu-link" href="signup.html">Signup</a></li>
+                        <li class="submenu-item"><a class="submenu-link" href="reset-password.html">Reset password</a></li>
+                        <li class="submenu-item"><a class="submenu-link" href="404.html">404 page</a></li>
                     </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="employees.html">Employees List </a></li>
-                <li><a href="leaves.html">Leaves </a></li>
-                <li><a href="holidays.html">Holidays </a></li>
-                <li><a href="attendance.html">Attendance </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="invoices.html">Invoices </a></li>
-                <li><a href="payments.html">Payments </a></li>
-                <li><a href="expenses.html">Expenses </a></li>
-                <li><a href="taxes.html">Taxes </a></li>
-                <li><a href="provident-fund.html">Provident Fund </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="salary.html">Employee Salary </a></li>
-                <li><a href="salary-veiw.html">Payslip </a></li>
-            </ul>
-        </li>
-        <li> <a href="calendar.html"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a> </li>
-        <li class="submenu"> <a href="#"><i class="fe fe-table"></i> <span> Blog </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="blog.html">Blog </a></li>
-                <li><a href="blog-details.html">Blog Veiw </a></li>
-                <li><a href="add-blog.html">Add Blog </a></li>
-                <li><a href="edit-blog.html">Edit Blog </a></li>
-            </ul>
-        </li>
-        <li> <a href="assets.html"><i class="fas fa-cube"></i> <span>Assests</span></a> </li>
-        <li> <a href="activities.html"><i class="far fa-bell"></i> <span>Activities</span></a> </li>
-        <li class="submenu"> <a href="#"><i class="fe fe-table"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="expense-reports.html">Expense Report </a></li>
-                <li><a href="invoice-reports.html">Invoice Report </a></li>
-            </ul>
-        </li>
-        <li> <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a> </li>
-        <li class="list-divider"></li>
-        <li class="menu-title mt-3"> <span>UI ELEMENTS</span> </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-laptop"></i> <span> Components </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="uikit.html">UI Kit </a></li>
-                <li><a href="typography.html">Typography </a></li>
-                <li><a href="tabs.html">Tabs </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-edit"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="form-basic-inputs.html">Basic Input </a></li>
-                <li><a href="form-input-groups.html">Input Groups </a></li>
-                <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                <li><a href="form-vertical.html">Vertical Form </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="tables-basic.html">Basic Table </a></li>
-                <li><a href="tables-datatables.html">Data Table </a></li>
-            </ul>
-        </li>
-        <li class="list-divider"></li>
-        <li class="menu-title mt-3"> <span>EXTRAS</span> </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-columns"></i> <span> Pages </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="login.html">Login </a></li>
-                <li><a href="register.html">Register </a></li>
-                <li><a href="forgot-password.html">Forgot Password </a></li>
-                <li><a href="change-password.html">Change Password </a></li>
-                <li><a href="lock-screen.html">Lockscreen </a></li>
-                <li><a href="profile.html">Profile </a></li>
-                <li><a href="gallery.html">Gallery </a></li>
-                <li><a href="error-404.html">404 Error </a></li>
-                <li><a href="error-500.html">500 Error </a></li>
-                <li><a href="blank-page.html">Blank Page </a></li>
-            </ul>
-        </li>
-        <li class="submenu"> <a href="#"><i class="fas fa-share-alt"></i> <span> Multi Level </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-                <li><a href="">Level 1 </a></li>
-                <li><a href="">Level 2 </a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
+                </div>
+            </li><!--//nav-item-->
+
+           
+            <li class="nav-item">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link" href="charts.html">
+                    <span class="nav-icon">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bar-chart-line" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+                    </svg>
+                     </span>
+                     <span class="nav-link-text">Charts</span>
+                </a><!--//nav-link-->
+            </li><!--//nav-item-->
+            
+            <li class="nav-item">
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a class="nav-link" href="help.html">
+                    <span class="nav-icon">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                    </svg>
+                     </span>
+                     <span class="nav-link-text">Help</span>
+                </a><!--//nav-link-->
+            </li><!--//nav-item-->					    
+        </ul><!--//app-menu-->
+    </nav><!--//app-nav-->
+   
+   
+</div><!--//sidepanel-inner-->

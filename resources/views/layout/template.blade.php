@@ -1,41 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Hotel Dashboard Template</title>
-	<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/favicon.png')}}">
-	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/fontawesome.min.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/all.min.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/css/feathericon.min.css')}}">
-	<link rel="stylehseet" href="{{asset('https://cdn.oesmith.co.uk/morris-0.5.1.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> </head>
+    <title>Gestion Employer</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="{{asset('assets/plugins/fontawesome/js/all.min.js')}}"></script>
+    
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="{{asset('assets/css/portal.css')}}">
 
-<body>
-	<div class="main-wrapper">
-		<div class="header">
-			@include('layout.topbar')
-			<div class="sidebar" id="sidebar">
-			<div class="sidebar-inner slimscroll">
-				@include('layout.navigation')
-			</div>
-		</div>
-		<div class="page-wrapper">
-			@yield('content')
-		</div>
-	</div>
-	<script data-cfasync="false" src="{{asset('../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script>
-	<script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
-	<script src="{{asset('assets/js/popper.min.js')}}"></script>
-	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('assets/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
-	<script src="{{asset('assets/plugins/raphael/raphael.min.js')}}"></script>
-	<script src="{{asset('assets/plugins/morris/morris.min.js')}}"></script>
-	<script src="{{asset('assets/js/chart.morris.js')}}"></script>
-	<script src="{{asset('assets/js/script.js')}}"></script>
+</head> 
+
+<body class="app">   	
+    <header class="app-header fixed-top">	   	            
+        <div class="app-header-inner">  
+	        <div class="container-fluid py-2">
+		        @include('layout.topbar')
+	        </div><!--//container-fluid-->
+        </div><!--//app-header-inner-->
+        <div id="app-sidepanel" class="app-sidepanel"> 
+	      @include('layout.navigation')
+	    </div><!--//app-sidepanel-->
+    </header><!--//app-header-->
+    
+<div class="app-wrapper">
+	    
+	    <div class="app-content pt-3 p-md-3 p-lg-4">
+		    <div class="container-xl">
+			    
+			    @yield('content')
+		    </div><!--//container-fluid-->
+	    </div><!--//app-content-->
+	    
+	    <footer class="app-footer">
+		    <div class="container text-center py-3">
+		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+		       
+		    </div>
+	    </footer><!--//app-footer-->
+	    
+    </div><!--//app-wrapper-->    					
+
+ 
+    <!-- Javascript -->          
+    <script src="{{asset('assets/plugins/popper.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>  
+
+    <!-- Charts JS -->
+    <script src="{{asset('assets/plugins/chart.js/chart.min.js')}}"></script> 
+    <script src="{{asset('assets/js/index-charts.js')}}"></script> 
+    
+    <!-- Page Specific JS -->
+    <script src="{{asset('assets/js/app.js')}}"></script> 
+
 </body>
+</html> 
 
-</html>
