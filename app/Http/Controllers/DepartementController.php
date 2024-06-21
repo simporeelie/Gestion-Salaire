@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Departement;
 use Illuminate\Http\Request;
+use App\Http\Requests\departementRequest;
+use Exception;
 
 class DepartementController extends Controller
 {
@@ -12,7 +14,8 @@ class DepartementController extends Controller
      */
     public function index()
     {
-        //
+        $departements=Departement::paginate(10);
+        return view('departement.index', compact('departements'));
     }
 
     /**
@@ -20,16 +23,29 @@ class DepartementController extends Controller
      */
     public function create()
     {
-        //
+        return view('departement.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(DepartementRequest $request)
+{
+    
+    try {
+        // Valider les données
+        $departementData = $request->validated();
+        // Créer le département
+        $departement = Departement::create($departementData);
+            return redirect()->route('departement.index')->with('success_message', 'Département ajouté avec succès.');
+            throw new \Exception('Échec de la création du département.');
+        
+     } catch (Exception $e) {
+        return redirect()->back()->with('error_message', 'Une erreur est survenue lors de l\'ajout du département. Veuillez réessayer.');
     }
+}
+
+    
 
     /**
      * Display the specified resource.
@@ -44,7 +60,7 @@ class DepartementController extends Controller
      */
     public function edit(Departement $departement)
     {
-        //
+        return view('departement.edit');
     }
 
     /**
